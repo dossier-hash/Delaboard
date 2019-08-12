@@ -1,9 +1,51 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>A free and secure imageboard | delaboard</title>
-</head>
-<body>
-	<h1>Delaboard</h1>
-</body>
-</html>
+{% extends "_base.html" %}
+
+{% block content %}
+	<style type="text/css">
+		* {
+			text-align: center;
+		}
+		body {
+			/*background-color: pink;*/
+		}
+		.jumbotron {
+			background-color: inherit;
+		}
+		.frow {
+			background-color: gray;
+			padding-top: 5px;
+			color: white;
+		}
+		.brow {
+			padding: 10px;
+			background-color: rgba(230, 230, 230, 10)
+		}
+	</style>
+	<div class='jumbotron'>
+		<h1 style='font-family: "Pacifico";'><img src='static/icon.svg'style='width: 125px; height: 125px; padding-right: 10px;'/>Delaboard</h1>
+	</div>
+	<div class="row frow">
+		<div class='col-lg'><h4>Boards</h4></div>
+	</div>
+	<div class="row brow">
+		<div class='col-4'><b>Technology</b></div>
+		<div class='col-4'><b>Anime</b></div>
+		<div class='col-4'><b>General</b></div>
+	</div>
+	<div class="row brow">
+		<div class='col-4'><a href='/tg/'>/tg/</a></div>
+		<div class='col-4'><a href='/tg/'>/ag/</a></div>
+		<div class='col-4'><a href='/tg/'>/g/</a></div>
+	</div>
+	<div class="row brow">
+		<div class='col-4'><a href='/tg/'>/p/</a></div>
+		<div class='col-4'><a href='/tg/'>/h/</a></div>
+		<div class='col-4'><a href='/tg/'>/f/</a></div>
+	</div>
+	<div class="row brow">
+		<div class='col-4'><a href='/tg/'>/b/</a></div>
+		<div class='col-4'><a href='/tg/'>/yy/</a></div>
+		<div class='col-4'><a href='/tg/'>/t/</a></div>
+	</div>
+
+{% endblock %}
