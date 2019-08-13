@@ -1,0 +1,20 @@
+{% extends "_base.html" %}
+
+{% block content %}
+	<div class='jumbotron'>
+		<h1>{{ board }}</h1>
+	</div>
+	<div class='post-form'>
+		<form method='POST'>
+			<textarea name='content' placeholder="Type here..."></textarea><br>
+			<input type='submit' />
+		</form>
+	</div>
+	<div class='container'>
+		<ul>
+			{% for post in posts %}
+			<li>{{ post.content }}</li>
+			{% endfor %}
+		</ul>
+	</div>
+{% endblock %}

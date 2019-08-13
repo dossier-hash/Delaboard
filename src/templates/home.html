@@ -16,6 +16,9 @@
 			padding-top: 5px;
 			color: white;
 		}
+		.frowr {
+			background-color: rgba(233, 0, 0, 100);
+		}
 		.brow {
 			padding: 10px;
 			background-color: rgba(230, 230, 230, 10)
@@ -24,28 +27,40 @@
 	<div class='jumbotron'>
 		<h1 style='font-family: "Pacifico";'><img src='static/icon.svg'style='width: 125px; height: 125px; padding-right: 10px;'/>Delaboard</h1>
 	</div>
-	<div class="row frow">
-		<div class='col-lg'><h4>Boards</h4></div>
+	<div class='announcements'>
+		<div class='row frow frowr'>
+			<div class='col-lg'><h4>Announcements</h4></div>
+		</div>
+		<ul class='brow'>
+			<li>
+				Welcome to Delaboard!
+			</li>
+		</ul>
 	</div>
-	<div class="row brow">
-		<div class='col-4'><b>Technology</b></div>
-		<div class='col-4'><b>Anime</b></div>
-		<div class='col-4'><b>General</b></div>
-	</div>
-	<div class="row brow">
-		<div class='col-4'><a href='/tg/'>/tg/</a></div>
-		<div class='col-4'><a href='/tg/'>/ag/</a></div>
-		<div class='col-4'><a href='/tg/'>/g/</a></div>
-	</div>
-	<div class="row brow">
-		<div class='col-4'><a href='/tg/'>/p/</a></div>
-		<div class='col-4'><a href='/tg/'>/h/</a></div>
-		<div class='col-4'><a href='/tg/'>/f/</a></div>
-	</div>
-	<div class="row brow">
-		<div class='col-4'><a href='/tg/'>/b/</a></div>
-		<div class='col-4'><a href='/tg/'>/yy/</a></div>
-		<div class='col-4'><a href='/tg/'>/t/</a></div>
+	<div class='board'>
+		<div class="row frow">
+			<div class='col-lg'><h4>Boards</h4></div>
+		</div>
+		<div class="row brow">
+			<div class='col-4'><b>Technology</b></div>
+			<div class='col-4'><b>Anime</b></div>
+			<div class='col-4'><b>General</b></div>
+		</div>
+		<div class="row brow">
+			<div class='col-4'><a href='/tg/'>/tg/</a></div>
+			<div class='col-4'><a href='/tg/'>/ag/</a></div>
+			<div class='col-4'><a href='/tg/'>/g/</a></div>
+		</div>
+		<div class="row brow">
+			<div class='col-4'><a href='/tg/'>/p/</a></div>
+			<div class='col-4'><a href='/tg/'>/h/</a></div>
+			<div class='col-4'><a href='/tg/'>/f/</a></div>
+		</div>
+		<div class="row brow">
+			<div class='col-4'><a href='/tg/'>/b/</a></div>
+			<div class='col-4'><a href='/tg/'>/yy/</a></div>
+			<div class='col-4'><a href='/tg/'>/t/</a></div>
+		</div>
 	</div>
 
 {% endblock %}
