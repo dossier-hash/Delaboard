@@ -2,7 +2,8 @@
 
 {% block content %}
 	<div class='jumbotron'>
-		<h1>{{ board }}</h1>
+		<h1>/{{ board }}/</h1>
+		<p>{{ description }}</p>
 	</div>
 	<div class='post-form'>
 		<form method='POST'>
@@ -11,9 +12,17 @@
 		</form>
 	</div>
 	<div class='container'>
-		<ul>
 			{% for post in posts %}
-			<li>{{ post.content }}</li>
+			<div style='padding-right: 20%; padding-left: 20%;'>
+				<table class='table sortable'>
+					<tr style='font-size: 20px;'>
+						<td style='text-align: left'>
+							Anonymous #{{ post.id }}<br>
+							{{ post.content }}
+						</td>
+					</tr>
+				</table>
+			</div>
 			{% endfor %}
 		</ul>
 	</div>

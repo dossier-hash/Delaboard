@@ -27,6 +27,18 @@ def home():
 
 @app.route('/<board>/', methods=['POST', 'GET'])
 def board(board):
+	ok_boards = {
+		'tg': 'General talking space for tech cucks',
+		'ag' : 'General talking space for fat weeaboos',
+		'g' : 'General talking space for all delars',
+		'p' : 'Programming talk and shit',
+		'h' : '/''Tis hentai',
+		'f' : 'Talk about good cuisine',
+		'l' : 'LINUX ONLY; FUCK YOU',
+		'yy' : 'Talk about that gross yaoi/yuri shit',
+		'o' : 'No restrictions. Talk about your shit opinions'
+	}
+
 	if request.method == 'POST':
 		post_content = request.form["content"]
 		post_board = board
@@ -35,8 +47,19 @@ def board(board):
 		db.session.commit()
 		return redirect('/g/')
 	else:
-		posts = Post.query.filter_by(board=board).all()
-		return render_template("board.html", board=board, posts=posts)
+		if board in ok_boards.keys():
+			posts = Post.query.filter_by(board=board).all()
+			return render_template("board.html", board=board, 
+				posts=posts, description=ok_boards[board])
+		else:
+			return redirect('/')
+
+@app.route('/<board>/post/<int:postid>', methods=['POST', 'GET'])
+def post(postid):
+	if request.method == 'POST':
+		pass
+	else:
+		pass
 
 if __name__ == '__main__':
 	app.run(debug=True)
