@@ -11,7 +11,7 @@ git clone https://github.com/dossier-hash/delaboard.git
 Setup the database in the src folder from the python cmd and then run
 ```python3 
 from app import db
-db.create_all
+db.create_all()
 exit()
 ```
 Then,
